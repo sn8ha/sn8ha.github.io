@@ -1,0 +1,220 @@
+
+:root{
+    --black:#322C2B;
+    --maroon:#6D2323;
+    --pastel_maroon:#803D3B;
+    --red:#A31D1D;
+    --coffee:#AF8260;
+    --dark_beige:#E4C59E;
+    --beige:hsl(38, 52%, 79%);
+    --lighter:#FEF9E1;
+    --icon:#F6DBA7;
+
+}
+/* :root is the best place to define them globally, so they can be reused throughout your stylesheet. */
+/* syntaxis like var(maroon) */
+body {
+    font-family: 'Poppins', sans-serif;
+
+     }
+      
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    -webkit-font-smoothing:antialiased;
+}
+header{
+    background:var(--icon);
+    
+}
+.container{
+    /* to make everything to center */
+    max-width: 1152px;
+    padding:0 15px ;
+    margin:0 auto;
+}
+
+/*for the upper part*/
+header nav .left a{
+    color:var(--maroon);
+    text-decoration: none;
+    margin-right: 2rem; 
+    text-transform: uppercase;
+    transition: all .3s ease; /* ease control how fast or ho slow the animation runs*/
+}
+/* a is for styling a element(link ) */
+header nav{
+    padding:2rem 0;
+}
+
+header nav .logo{
+    margin-right:  3rem; /* 3 x root font ,rem is align space between element*/
+}
+/* hover in css is a pseudo-class used to style an element when the mouse is over it */
+header nav .left a:hover{
+    color:var(--lighter);
+}
+
+
+/*header part over hehehe*/
+
+/*first page*/
+
+.front_page{
+    padding:3rem 0;
+}
+.front_page .left img{
+    width:450px;
+    border-radius: 20px;
+}
+
+.front_page .right{
+    color:#6D2323;
+}
+.front_page .right h6{
+    font-size: 1.6rem;
+    color:#5a4d44;
+    margin-bottom:0.5rem;
+    font-weight:600;
+}
+.front_page .right h1{
+    font-size:2rem;
+    font-weight:500;
+    line-height:1.2;
+    margin-bottom: 2rem;
+    align-items: center;
+
+    
+}
+.front_page .right h1 span{
+    color:var(--red);   
+}
+
+.front_page .right p{
+    line-height: 1.9;
+    margin-bottom:2rem;
+    margin-left:2rem;
+    font-size:1rem;
+}
+
+section{
+    padding:6rem 0;
+    scroll-behavior: smooth;
+}
+.lazy{
+    width:450px;
+    border-radius: 20px;
+}
+.edu-right{
+    margin-left:2rem;
+}
+section.education h1{
+    color:var(--black);
+}
+section.education h3{
+    color:#5a4d44;
+}
+.section-heading{
+    color:var(--black);
+    text-align:center;
+    margin-bottom:6rem;
+    line-height:0.5;
+
+}
+
+.section-heading + p{
+    color:var(--maroon);
+    text-align: center;
+}
+
+/*working on the cards */
+
+ .card-wrapper{
+    display:flex; /* to make layout*/
+    justify-content: center;
+    /*grid-template-columns: 1fr; if i want it more than once : grid-template-colums: repeat(3 , 1fr)
+    grid-column-gap: 2rem;
+    grid-row-gap:2rem ; */
+    padding: 2rem ;
+    align-items: center;
+}
+
+.card {
+    background: var(--beige);
+    padding: 5rem 2rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    position: relative;
+
+  }
+.card-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border: 5px solid var(--lighter); /* Makes it blend into card */
+  }
+
+  .flex{
+    display:flex;
+    /*  used to create a flex container, which makes it easier to align and distribute space among items in a container — even when their size is unknown or dynamic. */
+}
+.items-center{
+    align-items:center;
+}
+.justify-between{
+    justify-content: space-between; /* This is a Flexbox property. It tells the browser how to distribute space between flex items in a container. */
+}
+
+.btn{
+    padding:0.8rem 1rem;
+    font-size:1rem;
+    font-weight:500;
+    border:3px solid transparent;
+    outline:none;
+    cursor:pointer;
+    border-radius: 15px;
+    transform: all .5s ease;
+}
+.btn-primary{
+    background:var(--pastel_maroon);
+    color:var(--beige);
+    text-transform: uppercase;
+
+}
+.btn-primary:hover{
+    background:transparent;
+    border-color:var(--maroon);
+    color:var(--pastel_maroon);
+}
+
+.btn-secondary{
+    background: transparent;
+    color:var(--maroon);
+    border-color:var(--maroon);
+    
+}
+.btn-secondary:hover{
+    background:var(--maroon);
+    color:var(--icon);
+}
+.flex-1{
+    flex:1;
+}
+.justify-center{
+    justify-content: center;
+}
+.education{
+    background-color: var(--icon);
+}
+.project{
+    background-color: var(--icon);
+}
