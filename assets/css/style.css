@@ -199,12 +199,15 @@ section.education h3{
 .btn-secondary{
     background: transparent;
     color:var(--maroon);
+    text-decoration: none;
     border-color:var(--maroon);
+
     
 }
 .btn-secondary:hover{
     background:var(--maroon);
     color:var(--icon);
+    text-decoration: none;
 }
 .flex-1{
     flex:1;
@@ -218,3 +221,133 @@ section.education h3{
 .project{
     background-color: var(--icon);
 }
+
+.section .contact h1{
+    margin-bottom: 1rem;
+
+}
+.icon-making{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 50%;
+    margin-left: 5px;
+    transition:transform 0.2s ease;
+}
+.icon-making:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.icon-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* This gives equal spacing between icons */
+    flex-wrap: wrap; /* Icons will wrap on smaller screens */
+}
+
+.contact-section {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.contact-section h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.contact-section h1 span {
+    color: #800000; /* Optional: different color for "Me" */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit:cover; /* Optional: soft corners */
+    display: block;   /* Space below image */
+  }
+
+  .arts span{
+    color:var(--maroon)
+  }
+
+
+
+
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .container {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+    .front_page, .education .container, .contact .container, .project .container, .arts .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .front_page .left img,
+    .lazy {
+        width: 100%;
+        max-width: 350px;
+        margin-bottom: 2rem;
+    }
+    .edu-right, .front_page .right, .card {
+        margin: 0 auto;
+    }
+    .card-wrapper {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    header nav .left {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    header nav .left a {
+        margin: 0.5rem;
+    }
+    .front_page .right h1, .contact-section h1, .section-heading {
+        font-size: 1.5rem;
+    }
+    .front_page .right p, section.education p {
+        margin-left: 0;
+        font-size: 0.95rem;
+    }
+    .icon-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+        padding: 3rem 1rem 1rem;
+    }
+    .card-img {
+        width: 60px;
+        height: 60px;
+        top: -40px;
+    }
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.8rem;
+    }
+    .icon-making {
+        width: 25px;
+        height: 25px;
+    }
+    header nav {
+        padding: 1rem 0;
+    }
+    .contact-section h1 {
+        font-size: 24px;
+    }
+    .contact-section {
+        margin-top: 20px;
+    }
+}
+
